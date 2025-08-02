@@ -1,3 +1,5 @@
+// Student Task Manager
+
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 function saveTasks() {
@@ -29,6 +31,7 @@ function renderTasks() {
 
   tasks.forEach((task, index) => {
     const li = document.createElement("li");
+
     const span = document.createElement("span");
     span.innerText = task.text;
     if (task.completed) span.style.textDecoration = "line-through";
@@ -57,6 +60,7 @@ function renderTasks() {
     li.appendChild(prioritySpan);
     li.appendChild(completeBtn);
     li.appendChild(deleteBtn);
+
     taskList.appendChild(li);
   });
 }

@@ -1,97 +1,86 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+/* Student Task Manager Styling */
 
 body {
-  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
   color: #333;
 }
 
-.task-input {
+.input-section {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-input, select, button {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-}
-
-input, select {
+input[type="text"], select {
   flex: 1;
+  padding: 10px;
+  font-size: 16px;
 }
 
 button {
-  background-color: #007bff;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
-  background-color: #fff;
-  padding: 12px;
-  border-radius: 10px;
-}
-
-li span {
-  flex: 1;
+  background: #f1f1f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .priority-badge {
-  padding: 3px 7px;
-  border-radius: 5px;
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 12px;
   font-size: 12px;
-  margin: 0 10px;
+  font-weight: bold;
 }
 
 .low {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #d1e7dd;
+  color: #0f5132;
 }
 
 .medium {
   background-color: #fff3cd;
-  color: #856404;
+  color: #664d03;
 }
 
 .high {
   background-color: #f8d7da;
-  color: #721c24;
+  color: #842029;
 }
