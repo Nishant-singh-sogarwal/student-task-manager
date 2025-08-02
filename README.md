@@ -25,4 +25,4 @@ A simple yet powerful task manager built for students to track assignments, back
 
 Here’s how the Student Task Manager looks in action:
 
-![App Screenshot](![task manager](<task manager-1.png>))
+![App Screenshot](![task manager](<taskmanager.png>))
