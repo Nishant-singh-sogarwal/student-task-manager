@@ -2,28 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Task Manager V2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Task Manager</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎓 Student Task Manager</h1>
-    <div class="form">
+    <h1>📚 Student Task Manager</h1>
+    <div class="task-input">
       <input type="text" id="taskInput" placeholder="Enter your task..." />
-
-      <label for="priority">Priority:</label>
       <select id="priority">
         <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
+        <option value="Medium" selected>Medium</option>
         <option value="High">High</option>
       </select>
-
-      <button onclick="addTask()">Add Task</button>
+      <button onclick="addTask()">Add</button>
     </div>
     <ul id="taskList"></ul>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

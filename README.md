@@ -1,25 +1,21 @@
-# 🎓 Student Task Manager V2
+# 🎓 Student Task Manager V3
 
-A simple yet powerful task manager built for students to track assignments, backlogs, and goals.
+A clean and functional task manager to help students organize study tasks and backlog.
 
 ## 🔧 Tech Stack
 
 - HTML
-- CSS
+- CSS (Glassmorphism UI)
 - JavaScript
 - localStorage
 
 ## 🚀 Features
 
 - Add, complete, and delete tasks
-- Prioritize tasks with **Low / Medium / High** badges
-- Data persists using browser localStorage
-- Responsive UI
+- Set priorities (Low, Medium, High) with color-coded badges
+- Data saved in browser localStorage
+- Mobile responsive
 
 ## 🌐 Live Link
 
 🔗 [Click here to view live](https://nishant-singh-sogarwal.github.io/student-task-manager)
-
-## 📷 Preview
-
-![App Screenshot](screenshot.png) <!-- Add this if you have screenshot -->
