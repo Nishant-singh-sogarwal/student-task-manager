@@ -12,5 +12,5 @@ A simple task manager app for students to keep track of subjects, assignments, a
 ## 🛠️ Tech Used
 HTML, CSS, JavaScript
 
-## 🔗 Live Link
-(Will be added after deployment)
+## 🔗 Live Link  
+[Click to open the live app](https://nishant-singh-sogarwal.github.io/student-task-manager/)
