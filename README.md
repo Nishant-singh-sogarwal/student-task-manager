@@ -1,16 +1,25 @@
-# student-task-manager
-A simple task manager for students to track subjects and deadlines.# Student Task Manager 🧠
+# 🎓 Student Task Manager V2
 
-A simple task manager app for students to keep track of subjects, assignments, and to-do lists.
+A simple yet powerful task manager built for students to track assignments, backlogs, and goals.
 
-## ✨ Features
-- Add new tasks
-- Mark tasks as completed
-- Delete tasks
-- Stores tasks using localStorage
+## 🔧 Tech Stack
 
-## 🛠️ Tech Used
-HTML, CSS, JavaScript
+- HTML
+- CSS
+- JavaScript
+- localStorage
 
-## 🔗 Live Link
-(Will be added after deployment)
+## 🚀 Features
+
+- Add, complete, and delete tasks
+- Prioritize tasks with **Low / Medium / High** badges
+- Data persists using browser localStorage
+- Responsive UI
+
+## 🌐 Live Link
+
+🔗 [Click here to view live](https://nishant-singh-sogarwal.github.io/student-task-manager)
+
+## 📷 Preview
+
+![App Screenshot](screenshot.png) <!-- Add this if you have screenshot -->

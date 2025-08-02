@@ -1,44 +1,64 @@
-let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-function renderTasks() {
-  const ul = document.getElementById("taskList");
-  ul.innerHTML = "";
-  taskList.forEach((task, index) => {
-    const li = document.createElement("li");
-    li.className = task.completed ? "done" : "";
-    li.innerHTML = `
-      ${task.text}
-      <span>
-        <button onclick="toggleTask(${index})">✔</button>
-        <button onclick="deleteTask(${index})">🗑</button>
-      </span>
-    `;
-    ul.appendChild(li);
-  });
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function addTask() {
-  const input = document.getElementById("taskInput");
+  const taskInput = document.getElementById("taskInput");
+  const priority = document.getElementById("priority").value;
+  const taskText = taskInput.value.trim();
+
+  if (taskText === "") return;
+
   const task = {
-    text: input.value,
+    text: taskText,
+    priority: priority,
     completed: false
   };
-  taskList.push(task);
-  localStorage.setItem("tasks", JSON.stringify(taskList));
-  input.value = "";
+
+  tasks.push(task);
+  saveTasks();
   renderTasks();
+  taskInput.value = "";
 }
 
-function toggleTask(index) {
-  taskList[index].completed = !taskList[index].completed;
-  localStorage.setItem("tasks", JSON.stringify(taskList));
-  renderTasks();
-}
+function renderTasks() {
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
 
-function deleteTask(index) {
-  taskList.splice(index, 1);
-  localStorage.setItem("tasks", JSON.stringify(taskList));
-  renderTasks();
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = task.text;
+    if (task.completed) span.style.textDecoration = "line-through";
+
+    const prioritySpan = document.createElement("span");
+    prioritySpan.innerText = task.priority;
+    prioritySpan.classList.add("priority-badge", task.priority.toLowerCase());
+
+    const completeBtn = document.createElement("button");
+    completeBtn.innerText = task.completed ? "Undo" : "Complete";
+    completeBtn.onclick = () => {
+      task.completed = !task.completed;
+      saveTasks();
+      renderTasks();
+    };
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    deleteBtn.onclick = () => {
+      tasks.splice(index, 1);
+      saveTasks();
+      renderTasks();
+    };
+
+    li.appendChild(span);
+    li.appendChild(prioritySpan);
+    li.appendChild(completeBtn);
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+  });
 }
 
 renderTasks();
