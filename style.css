@@ -1,50 +1,61 @@
-/* Student Task Manager Styling */
+/* style.css */
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 .container {
   max-width: 600px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-.input-section {
+.subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.task-input {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-input[type="text"], select {
+input, select, button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input, select {
   flex: 1;
-  padding: 10px;
-  font-size: 16px;
 }
 
 button {
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
 ul {
@@ -53,35 +64,40 @@ ul {
 }
 
 li {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #f1f1f1;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .priority-badge {
-  margin-left: 10px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.low {
-  background-color: #d1e7dd;
-  color: #0f5132;
-}
-
-.medium {
-  background-color: #fff3cd;
-  color: #664d03;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
 }
 
 .high {
-  background-color: #f8d7da;
-  color: #842029;
+  background-color: #ff7675;
+  color: white;
 }
-/* Force update GitHub Pages */
+.medium {
+  background-color: #ffeaa7;
+  color: black;
+}
+.low {
+  background-color: #c8f7dc;
+  color: black;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
